@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+bspc monitor -d I II III IV V
+
+bspc config border_width         4
+bspc config window_gap          24
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+sxhkd &
+
