@@ -7,14 +7,13 @@
   custom-file                        "~/.emacs.d/custom.el"
   indent-tabs-mode                   nil
   show-trailing-whitespace           t
-  x-gtk-use-system-tooltips          nil
   show-paren-when-point-inside-paren t
   show-paren-style                   'expression
   coding-system-for-read             'utf-8
   coding-system-for-write            'utf-8
   org-directory                      "~/org"
   org-default-notes-file             (concat (file-name-as-directory org-directory)
-                                             "/anotações.org")
+                                             "/notes.org")
   display-line-numbers               'visual
   package-archives
     '(("org"       . "http://orgmode.org/elpa/")
@@ -22,9 +21,11 @@
       ("melpa"     . "https://melpa.org/packages/")
       ("marmalade" . "https://marmalade-repo.org/packages/")))
 
-(menu-bar-mode   -1)
-(tool-bar-mode   -1)
-(scroll-bar-mode -1)
+(menu-bar-mode -1)
+(if (fboundp 'tool-bar-mode)
+  (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode)
+  (scroll-bar-mode -1))
 
 (require 'package)
 (package-initialize)
@@ -41,4 +42,4 @@
 
 (use-package evil
   :init
-(evil-mode 1))
+  (evil-mode 1))
