@@ -11,9 +11,9 @@
   show-paren-style                   'expression
   coding-system-for-read             'utf-8
   coding-system-for-write            'utf-8
-  org-directory                      "~/org"
+  org-directory                      "~/org/"
   org-default-notes-file             (concat (file-name-as-directory org-directory)
-                                             "/notes.org")
+                                             "notes.org")
   display-line-numbers               'visual
   package-archives
     '(("org"       . "http://orgmode.org/elpa/")
@@ -43,3 +43,24 @@
 (use-package evil
   :init
   (evil-mode 1))
+
+(use-package elfeed
+  :init
+  (use-package elfeed-org
+    :init
+    (setq rmh-elfeed-org-files
+          (list (concat (file-name-as-directory org-directory)
+                        "elfeed.org"))
+          elfeed-search-filter "@6-month-ago +unread"
+          shr-inhibit-images t))
+  :commands
+  'elfeed
+  :config
+  (elfeed-org))
+
+(use-package editorconfig
+  :config
+  (editorconfig-mode 1))
+
+(use-package css-mode
+  :mode ("\\.scss\\'" . css-mode))
