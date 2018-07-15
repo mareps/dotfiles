@@ -1,18 +1,17 @@
 #!/usr/bin/env bash
 
-. "$HOME/.cache/wal/colors.sh"
-
 trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 
-[ -e "$STATUS_BAR_FIFO" ] && rm "$STATUS_BAR_FIFO"
-mkfifo "$STATUS_BAR_FIFO"
+declare -r status_bar_fifo="${XDG_RUNTIME_DIR}/status-bar-fifo"
 
-bspc subscribe report > "$STATUS_BAR_FIFO" &
+[ -e "$status_bar_fifo" ] && rm "$status_bar_fifo"
+mkfifo "$status_bar_fifo"
 
-status_bar_content < "$STATUS_BAR_FIFO" | lemonbar -g "x48" -f "Monospace" \
-	                                           -a "10" -n "top-lemonbar" \
+bspc subscribe report > "$status_bar_fifo" &
+
+status_bar_content < "$status_bar_fifo" | lemonbar -g "x48" -f "Monospace" \
+	                                           -a "10" -n "lemonbar" \
 						   -u "4" -o "0" \
-                                                   -B "$color0" -F "$color8" \
                                         | bash &
 
 wait
