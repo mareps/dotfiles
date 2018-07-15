@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+. "$HOME/.cache/wal/colors.sh"
+
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+
+[ -e "$STATUS_BAR_FIFO" ] && rm "$STATUS_BAR_FIFO"
+mkfifo "$STATUS_BAR_FIFO"
+
+bspc subscribe report > "$STATUS_BAR_FIFO" &
+
+status_bar_content < "$STATUS_BAR_FIFO" | lemonbar -g "x48" -f "Monospace" \
+	                                           -a "10" -n "top-lemonbar" \
+						   -u "4" -o "0" \
+                                                   -B "$color0" -F "$color8" \
+                                        | bash &
+
+wait
