@@ -1,7 +1,7 @@
 [user]
 	email = asakeron@gmail.com
 	name = André Barnabá Silva
-	signingkey = 1F2F7748D1F011C0
+	signingkey = E450446D51476737
 [commit]
 	gpgsign = true
 [tag]
