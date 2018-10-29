@@ -7,6 +7,7 @@ Xft.antialias: 1
 Xft.rgba: rgb
 
 XTerm.termName: xterm-256color
+Xterm.vt100.locale: true
 XTerm.vt100.reverseVideo: true
 XTerm.vt100.faceName: Fira Code
 Xterm.vt100.faceSize: 14
