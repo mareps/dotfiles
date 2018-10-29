@@ -2,7 +2,7 @@
 #
 # Example panel for lemonbar
 
-. status_bar_colors 
+. status_bar_colors
 
 num_mon=$(bspc query -M | wc -l)
 
