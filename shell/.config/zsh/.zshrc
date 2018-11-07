@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export GPG_TTY=$(tty)
+export KEYTIMEOUT=1
 
 # Path to your oh-my-zsh installation.
 export ZSH=$ZDOTDIR/oh-my-zsh/
@@ -64,7 +65,7 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-#  git
+    vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
