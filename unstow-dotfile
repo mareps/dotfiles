@@ -1,0 +1,3 @@
+#!/bin/sh
+
+stow --verbose --no-folding --delete --target "$HOME" "$@"
