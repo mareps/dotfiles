@@ -1,4 +1,4 @@
-Xft.dpi: 144
+Xft.dpi: 149
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintsfull
@@ -8,6 +8,6 @@ Xft.rgba: rgb
 
 XTerm.termName: xterm-256color
 Xterm.vt100.locale: true
-XTerm.vt100.reverseVideo: true
 XTerm.vt100.faceName: Fira Code
 Xterm.vt100.faceSize: 14
+
