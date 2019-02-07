@@ -27,7 +27,7 @@ dbus-update-activation-environment --systemd DISPLAY XAUTHORITY
 
 feh --bg-center "$HOME/.wallpaper" &
 sxhkd &
-compton --backend glx --paint-on-overlay
+compton --backend glx --paint-on-overlay &
 polybar top &
 
 exec bspwm

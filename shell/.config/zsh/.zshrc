@@ -69,6 +69,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # User configuration
 

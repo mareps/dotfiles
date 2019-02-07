@@ -9,6 +9,7 @@ Xcursor.size: 32
 
 XTerm.termName: xterm-256color
 Xterm.vt100.locale: true
+Xterm.vt100.faceSize: 14
 XTerm.vt100.faceName: Hack Nerd Font Mono
 
 *background: rgb:32/32/34
