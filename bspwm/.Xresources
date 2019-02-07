@@ -11,6 +11,6 @@ XTerm.termName: xterm-256color
 Xterm.vt100.locale: true
 Xterm.vt100.faceSize: 14
 XTerm.vt100.faceName: Hack Nerd Font Mono
-
+XTerm.vt100.faceSize: 12
 *background: rgb:32/32/34
 *foreground: rgb:DF/DF/DF

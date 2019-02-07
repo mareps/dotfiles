@@ -23,11 +23,18 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-dbus-update-activation-environment --systemd DISPLAY XAUTHORITY
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?* ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
 
 feh --bg-center "$HOME/.wallpaper" &
 sxhkd &
-compton --backend glx --paint-on-overlay &
 polybar top &
+redshift &
+compton --backend glx --paint-on-overlay &
 
 exec bspwm
+
