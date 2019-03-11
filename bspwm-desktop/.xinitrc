@@ -32,9 +32,7 @@ fi
 
 feh --bg-center "$HOME/.wallpaper" &
 sxhkd &
-polybar top &
-redshift &
-compton --backend glx --paint-on-overlay &
+# polybar top &
 
 exec bspwm
 
