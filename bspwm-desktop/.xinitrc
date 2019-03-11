@@ -32,7 +32,7 @@ fi
 
 feh --bg-center "$HOME/.wallpaper" &
 sxhkd &
-# polybar top &
+polybar top &
 
 exec bspwm
 
