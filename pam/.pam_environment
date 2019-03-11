@@ -1,2 +1,0 @@
-PATH DEFAULT="${PATH}:@{HOME}/.local/bin"
-ZDOTDIR DEFAULT="@{HOME}/.config/zsh"
