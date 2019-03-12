@@ -7,6 +7,8 @@ set -eufo pipefail
 declare -r operand=${1:-"t"}
 declare -r argument=${2:-"2"}
 
+declare -r watcher_pipe="$XDG_RUNTIME_DIR/volume-watcher"
+
 # TODO: verificar parâmetros
 # TODO: Como selecionar o sink?
 
@@ -23,4 +25,6 @@ case $operand in
     pactl set-sink-mute 0 toggle
     ;;
 esac
+
+[[ -p $watcher_pipe ]] && pamixer --get-volume > $watcher_pipe
 

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+declare -r pipe="$XDG_RUNTIME_DIR/volume-watcher"
+
+[[ -e $pipe ]] && rm $pipe
+
+mkfifo $pipe
+
+tail -f $pipe | xob
+
