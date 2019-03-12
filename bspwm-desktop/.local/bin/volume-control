@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+# TODO: escrever usage
+
+declare -r operand=${1:-"t"}
+declare -r argument=${2:-"2"}
+
+# TODO: verificar parâmetros
+# TODO: Como selecionar o sink?
+
+case $operand in
+  "+")
+    pactl set-sink-mute 0 false
+    pactl set-sink-volume 0 "+${argument}%"
+    ;;
+  "-")
+    pactl set-sink-mute 0 false
+    pactl set-sink-volume 0 "-${argument}%"
+    ;;
+  "t")
+    pactl set-sink-mute 0 toggle
+    ;;
+esac
+

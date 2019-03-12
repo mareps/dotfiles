@@ -1,6 +1,19 @@
 #
-# wm independent hotkeys
+# Media keys
 #
+
+XF86AudioRaiseVolume
+	$HOME/.local/bin/volume-control + 3
+
+XF86AudioLowerVolume
+	$HOME/.local/bin/volume-control - 3
+
+XF86AudioMute
+	$HOME/.local/bin/volume-control t 0
+
+# XF86AudioPlay
+# XF86AudioNext
+# XF86AudioPrev
 
 # terminal emulator
 super + Return
