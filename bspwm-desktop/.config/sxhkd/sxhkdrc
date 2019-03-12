@@ -2,14 +2,8 @@
 # Media keys
 #
 
-XF86AudioRaiseVolume
-	$HOME/.local/bin/volume-control + 3
-
-XF86AudioLowerVolume
-	$HOME/.local/bin/volume-control - 3
-
-XF86AudioMute
-	$HOME/.local/bin/volume-control t 0
+{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
+	$HOME/.local/bin/volume-control {+,-,t} 3
 
 # XF86AudioPlay
 # XF86AudioNext
@@ -132,3 +126,4 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+

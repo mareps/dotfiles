@@ -28,3 +28,4 @@ esac
 
 [[ -p $watcher_pipe ]] && pamixer --get-volume > $watcher_pipe
 
+exit 0
