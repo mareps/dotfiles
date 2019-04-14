@@ -29,6 +29,12 @@ modules-center = xwindow
 modules-right = date
 wm-restack = bspwm
 
+tray-position = right
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-maxsize = 24
+
 [module/bspwm]
 type = internal/bspwm
 format = <label-state>
