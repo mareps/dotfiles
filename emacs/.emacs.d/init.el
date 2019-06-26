@@ -40,9 +40,17 @@
 
 (setq-default use-package-always-ensure t)
 
+(use-package gruvbox-theme
+  :config
+  (load-theme 'gruvbox-dark-medium t))
+
 (use-package evil
-  :init
-  (evil-mode 1))
+  :config
+  (evil-mode 1)
+
+  (use-package evil-leader
+    :config
+    (global-evil-leader-mode)))
 
 (use-package elfeed
   :init
@@ -61,3 +69,25 @@
 (use-package editorconfig
   :config
   (editorconfig-mode 1))
+
+
+;; Rust
+(use-package flycheck
+  :hook (prog-mode . flycheck-mode))
+
+(use-package company
+  :hook (prog-mode . company-mode)
+  :config (setq company-tooltip-align-annotations t)
+          (setq company-minimum-prefix-length 1))
+
+(use-package toml-mode)
+
+(use-package rust-mode
+  :hook (rust-mode . lsp))
+
+;; Add keybindings for interacting with Cargo
+(use-package cargo
+  :hook (rust-mode . cargo-minor-mode))
+
+(use-package flycheck-rust
+  :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
