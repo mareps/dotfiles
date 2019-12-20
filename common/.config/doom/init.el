@@ -31,15 +31,21 @@
  magit
  (eval +overlay)
  lsp
+ debugger
 
  :lang
  data
  markdown
  org
  sh
- emacs-lisp
  nix
+ (cc +lsp)
+ (javascript +lsp)
+ (csharp +lsp)
+ emacs-lisp
+ scheme
  (haskell +lsp)
+ (rust +lsp)
  psc
 
  :config
