@@ -1,3 +1,0 @@
-#!/bin/sh
-
-firejail --profile=minecraft /var/sandbox/asakeron/minecraft-client/client/VLauncher_x64

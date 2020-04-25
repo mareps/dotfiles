@@ -1,3 +1,0 @@
-#!/bin/sh
-
-firejail --profile=minecraft-server java -jar /var/sandbox/asakeron/minecraft-server/server/server.jar nogui
