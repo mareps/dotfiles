@@ -1,0 +1,11 @@
+[Unit]
+Description=sway wm
+Documentation=man:sway(5)
+BindsTo=graphical-session.target
+Wants=graphical-session-pre.target
+After=graphical-session-pre.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sway
+TimeoutStopSec=10
