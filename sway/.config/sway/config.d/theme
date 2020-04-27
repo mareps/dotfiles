@@ -1,0 +1,10 @@
+default_border pixel 2
+
+#gaps inner       8
+#gaps horizontal -8
+#gaps bottom     -8
+
+# class                 border  bg      text    ind     child_border
+client.unfocused        #000000 #000000 #000000 #000000 #000000
+client.focused          #15539e #0000ff #000000 #3584e4 #15539e
+client.focused_inactive #000000 #000000 #000000 #000000 #000000

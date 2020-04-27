@@ -187,5 +187,9 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
-# exec "systemctl --user --wait import-environment; systemctl --user start sway.target"
+# gaps inner 8
+
+include config.d/*
+
 exec "systemctl --user --wait import-environment SWAYSOCK; systemctl --user start sway.target"
+
