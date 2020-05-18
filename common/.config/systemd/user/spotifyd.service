@@ -1,8 +1,0 @@
-[Unit]
-Description=Spotify Daemon
-
-[Service]
-ExecStart=/usr/bin/spotifyd --no-daemon
-
-[Install]
-WantedBy=default.target

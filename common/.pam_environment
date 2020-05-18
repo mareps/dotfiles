@@ -1,8 +1,0 @@
-SSH_AGENT_PID   DEFAULT=
-SSH_AUTH_SOCK   DEFAULT="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
-PATH            DEFAULT="@{HOME}/.dotnet:@{HOME}/.dotnet/tools:@{HOME}/.yarn/bin:@{HOME}/.emacs.d/bin:@{HOME}/bin:${PATH}"
-EDITOR          DEFAULT="emacs"
-VISUAL          DEFAULT="emacs"
-
-DOTNET_CLI_TELEMETRY_OPTOUT DEFAULT="1"
-DOTNET_ROOT                 DEFAULT="@{HOME}/.dotnet"
