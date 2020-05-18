@@ -1,0 +1,4 @@
+#!/bin/sh
+
+./stow-dotfile $(find . -mindepth 1 -maxdepth 1 -type d -not -path '*/\.*' \
+                   -printf '%P\n') "$@"
