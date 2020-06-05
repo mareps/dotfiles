@@ -1,0 +1,8 @@
+[Unit]
+Description=Update flatpak user packages
+
+[Timer]
+OnCalendar=daily
+
+[Install]
+WantedBy=timers.target
