@@ -4,11 +4,11 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-xwayland disable
+xwayland enable
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod1
+set $mod Mod4
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -22,9 +22,7 @@ set $term alacritty
 set $menu wofi --show=drun | xargs swaymsg exec --
 
 ### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/asakeron/.config//sway/wallpaper.jpg fill
+output DP-1 scale 2
 #
 # Example configuration:
 #
@@ -69,7 +67,8 @@ input "1267:154:Elan_Touchpad" {
 
 input type:keyboard {
   xkb_layout br
-  xkb_model abnt2
+  xkb_model pc102
+  xkb_variant ck61
 }
 
 ### Key bindings
