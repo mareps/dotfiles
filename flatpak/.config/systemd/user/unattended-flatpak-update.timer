@@ -2,7 +2,7 @@
 Description=Update flatpak user packages
 
 [Timer]
-OnCalendar=daily
+OnCalendar=hourly
 
 [Install]
 WantedBy=timers.target
