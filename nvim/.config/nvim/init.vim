@@ -5,15 +5,16 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin(stdpath('data') . '/plugged')
+Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'ap/vim-css-color'
-Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
 
 Plug 'vimwiki/vimwiki'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'neoclide/coc.nvim', { 'branch': 'release'
+  \ , 'do': ':CocInstall coc-diagnostic' }
 call plug#end()
 
-colorscheme nord
+colorscheme dim
 
 map <Space> <Leader>
 
@@ -31,9 +32,8 @@ set autoindent
 set copyindent
 
 " VimWiki
-let g:vimwiki_list = [{'path': '~/.local/wiki',
-                      \ 'path_html': '~/.local/wiki/html'}]
-
+let g:vimwiki_list = [{ 'path': '~/.local/wiki'
+  \                   , 'path_html': '~/.local/wiki/html' }]
 
 " TextEdit might fail if hidden is not set.
 set hidden
