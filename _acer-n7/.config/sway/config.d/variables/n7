@@ -1,0 +1,3 @@
+### Use alt as mod key because chromebooks don't have a meta key.
+
+set $mod Mod1
