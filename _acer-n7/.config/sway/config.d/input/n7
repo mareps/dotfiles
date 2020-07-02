@@ -6,3 +6,7 @@ input "1267:154:Elan_Touchpad" {
   natural_scroll   enabled
   middle_emulation enabled
 }
+
+input type:keyboard {
+  xkb_layout br
+}
