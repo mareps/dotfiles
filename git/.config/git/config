@@ -1,9 +1,9 @@
 [user]
-	email = asakeron@gmail.com
-	name = André Barnabá Silva
-	signingkey = 1F2F7748D1F011C0
-[commit]
-	gpgsign = true
-[tag]
-	forceSignAnnotated = true
+	email = mareh.ps@gmail.com
+	name = Marina Barnabá Silva
+	#signingkey = 
+#[commit]
+#	gpgsign = true
+#[tag]
+#	forceSignAnnotated = true
 
